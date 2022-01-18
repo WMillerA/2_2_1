@@ -5,6 +5,12 @@ import javax.persistence.*;
 @Entity
 @Table(name = "users")
 public class User {
+<<<<<<< HEAD
+=======
+   @OneToOne(cascade = CascadeType.ALL)
+   @JoinColumn(name = "car_id")
+   private Car car;
+>>>>>>> 75ff48a (Initial commit)
 
    @Id
    @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -26,8 +32,20 @@ public class User {
       this.lastName = lastName;
       this.email = email;
    }
+<<<<<<< HEAD
 
    public Long getId() {
+=======
+   public User(String firstName, String lastName, String email, Car car) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+      this.email = email;
+      this.car = car;
+   }
+
+   public Long getId() {
+
+>>>>>>> 75ff48a (Initial commit)
       return id;
    }
 
@@ -58,4 +76,24 @@ public class User {
    public void setEmail(String email) {
       this.email = email;
    }
+<<<<<<< HEAD
 }
+=======
+
+   public Car getCar() {
+      return car;
+   }
+
+   @Override
+   public String toString() {
+      return "User{" +
+              "car=" + car +
+              ", id=" + id +
+              ", firstName='" + firstName + '\'' +
+              ", lastName='" + lastName + '\'' +
+              ", email='" + email + '\'' +
+              '}';
+   }
+}
+
+>>>>>>> 75ff48a (Initial commit)

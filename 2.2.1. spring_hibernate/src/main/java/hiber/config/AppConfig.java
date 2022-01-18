@@ -1,5 +1,9 @@
 package hiber.config;
 
+<<<<<<< HEAD
+=======
+import hiber.model.Car;
+>>>>>>> 75ff48a (Initial commit)
 import hiber.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -45,7 +49,11 @@ public class AppConfig {
       props.put("hibernate.hbm2ddl.auto", env.getProperty("hibernate.hbm2ddl.auto"));
 
       factoryBean.setHibernateProperties(props);
+<<<<<<< HEAD
       factoryBean.setAnnotatedClasses(User.class);
+=======
+      factoryBean.setAnnotatedClasses(User.class, Car.class);
+>>>>>>> 75ff48a (Initial commit)
       return factoryBean;
    }
 
